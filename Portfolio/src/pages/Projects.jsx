@@ -14,6 +14,7 @@ const projects = [
     title: 'Social Visualizer',
     description: 'Data visualization and analytics platform.',
     tech: ['React', 'JavaScript'],
+    live: 'https://social-connect-teal.vercel.app',
     github: 'https://github.com/Pratik7897/Social_Visualizer',
   },
   {
