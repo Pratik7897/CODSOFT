@@ -30,6 +30,7 @@ const projects = [
     title: 'Hand Drawing Using OpenCV',
     description: 'Computer vision application for virtual drawing using hand gestures.',
     tech: ['Python', 'OpenCV'],
+    live: 'https://hand-drawing-psi.vercel.app',
     github: 'https://github.com/Pratik7897/Hand-Drawing',
   },
   {
