@@ -2,6 +2,14 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    id: 0,
+    title: 'Personal Portfolio',
+    description: 'A modern, responsive portfolio website with glassmorphism UI.',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    live: 'https://pratik-portfolio-mauve.vercel.app',
+    github: 'https://github.com/Pratik7897/CODSOFT/tree/main/Portfolio',
+  },
+  {
     id: 1,
     title: 'Internship Portal',
     description: 'A platform for internship management and student opportunities.',
