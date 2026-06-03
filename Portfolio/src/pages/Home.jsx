@@ -88,7 +88,7 @@ const Home = () => {
                 <img 
                   src={profileImg} 
                   alt="Pratik Shinde" 
-                  className="w-full h-full object-cover scale-[1.45] origin-[50%_15%]"
+                  className="w-full h-full object-cover scale-[2.2] origin-[50%_55%]"
                 />
               </div>
               
