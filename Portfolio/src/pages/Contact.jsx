@@ -7,18 +7,28 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    const name = formData.get('name') || 'Guest';
+    const email = formData.get('email') || 'No email provided';
+    const subject = formData.get('subject') || 'New Message from Portfolio';
+    const message = formData.get('message') || '';
+    
+    // Actually trigger the email client to open and send the email
+    const mailtoLink = `mailto:shindepraatik@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+    window.location.href = mailtoLink;
+
     setStatus('sending');
     
-    // Simulate network request
+    // Show success UI state
     setTimeout(() => {
       setStatus('success');
       e.target.reset();
       
-      // Reset success message after 3 seconds
       setTimeout(() => {
         setStatus('');
       }, 3000);
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -80,6 +90,8 @@ const Contact = () => {
                 <input 
                   type="text" 
                   id="name" 
+                  name="name"
+                  required
                   className="w-full bg-gray-900/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   placeholder="John Doe"
                 />
@@ -89,6 +101,8 @@ const Contact = () => {
                 <input 
                   type="email" 
                   id="email" 
+                  name="email"
+                  required
                   className="w-full bg-gray-900/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   placeholder="john@example.com"
                 />
@@ -100,6 +114,8 @@ const Contact = () => {
               <input 
                 type="text" 
                 id="subject" 
+                name="subject"
+                required
                 className="w-full bg-gray-900/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                 placeholder="Project Idea"
               />
@@ -109,6 +125,8 @@ const Contact = () => {
               <label htmlFor="message" className="block text-gray-300 text-sm font-medium mb-2">Message</label>
               <textarea 
                 id="message" 
+                name="message"
+                required
                 rows="5" 
                 className="w-full bg-gray-900/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors resize-none"
                 placeholder="Tell me about your project..."
