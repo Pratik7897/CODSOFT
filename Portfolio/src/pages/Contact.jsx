@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -25,7 +25,7 @@ const Contact = () => {
         >
           <div className="glass-panel p-6 flex items-start space-x-4">
             <div className="bg-blue-600/20 p-3 rounded-lg text-blue-400">
-              <Mail size={24} />
+              <FaEnvelope size={24} />
             </div>
             <div>
               <h3 className="text-white font-semibold mb-1">Email</h3>
@@ -37,7 +37,7 @@ const Contact = () => {
           
           <div className="glass-panel p-6 flex items-start space-x-4">
             <div className="bg-purple-600/20 p-3 rounded-lg text-purple-400">
-              <MapPin size={24} />
+              <FaMapMarkerAlt size={24} />
             </div>
             <div>
               <h3 className="text-white font-semibold mb-1">Location</h3>
@@ -101,7 +101,7 @@ const Contact = () => {
               className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)] flex items-center justify-center space-x-2"
             >
               <span>Send Message</span>
-              <Send size={18} />
+              <FaPaperPlane size={18} />
             </button>
           </form>
         </motion.div>

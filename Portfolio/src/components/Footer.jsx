@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -14,13 +14,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="https://github.com/Pratik7897" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
-                <Github size={20} className="text-gray-300" />
+                <FaGithub size={20} className="text-gray-300" />
               </a>
               <a href="https://linkedin.com/in/pratikshinde07" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
-                <Linkedin size={20} className="text-gray-300" />
+                <FaLinkedin size={20} className="text-gray-300" />
               </a>
               <a href="mailto:shindepraatik@gmail.com" className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
-                <Mail size={20} className="text-gray-300" />
+                <FaEnvelope size={20} className="text-gray-300" />
               </a>
             </div>
           </div>
@@ -41,14 +41,14 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <Mail size={18} className="text-blue-400 mt-1 mr-3 flex-shrink-0" />
+                <FaEnvelope size={18} className="text-blue-400 mt-1 mr-3 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm font-medium">Email</p>
                   <a href="mailto:shindepraatik@gmail.com" className="text-blue-400 text-sm hover:underline">shindepraatik@gmail.com</a>
                 </div>
               </li>
               <li className="flex items-start">
-                <MapPin size={18} className="text-purple-400 mt-1 mr-3 flex-shrink-0" />
+                <FaMapMarkerAlt size={18} className="text-purple-400 mt-1 mr-3 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm font-medium">Location</p>
                   <p className="text-gray-400 text-sm">Pune, Maharashtra, India</p>
