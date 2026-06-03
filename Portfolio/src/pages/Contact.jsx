@@ -1,7 +1,26 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
 
 const Contact = () => {
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus('sending');
+    
+    // Simulate network request
+    setTimeout(() => {
+      setStatus('success');
+      e.target.reset();
+      
+      // Reset success message after 3 seconds
+      setTimeout(() => {
+        setStatus('');
+      }, 3000);
+    }, 1500);
+  };
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <motion.div
@@ -54,7 +73,7 @@ const Contact = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="lg:col-span-2"
         >
-          <form className="glass-panel p-8" onSubmit={(e) => e.preventDefault()}>
+          <form className="glass-panel p-8" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="name" className="block text-gray-300 text-sm font-medium mb-2">Your Name</label>
@@ -97,11 +116,23 @@ const Contact = () => {
             </div>
             
             <button 
-              type="submit" 
-              className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)] flex items-center justify-center space-x-2"
+              type="submit"
+              disabled={status === 'sending' || status === 'success'}
+              className={`w-full sm:w-auto px-8 py-4 ${status === 'success' ? 'bg-green-600 hover:bg-green-700 shadow-[0_0_20px_rgba(22,163,74,0.3)] hover:shadow-[0_0_25px_rgba(22,163,74,0.5)]' : 'bg-blue-600 hover:bg-blue-700 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)]'} text-white font-medium rounded-xl transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed`}
             >
-              <span>Send Message</span>
-              <FaPaperPlane size={18} />
+              {status === 'sending' ? (
+                <span>Sending...</span>
+              ) : status === 'success' ? (
+                <>
+                  <span>Message Sent!</span>
+                  <FaCheckCircle size={18} />
+                </>
+              ) : (
+                <>
+                  <span>Send Message</span>
+                  <FaPaperPlane size={18} />
+                </>
+              )}
             </button>
           </form>
         </motion.div>
