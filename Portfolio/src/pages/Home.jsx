@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import profileImg from '../assets/pratik.jpg';
+import profileImg from '../assets/pratik.png';
 
 const Home = () => {
   return (
@@ -88,7 +88,7 @@ const Home = () => {
                 <img 
                   src={profileImg} 
                   alt="Pratik Shinde" 
-                  className="w-full h-full object-cover scale-[2.5] object-[65%_65%]"
+                  className="w-full h-full object-cover object-[center_20%] scale-110"
                 />
               </div>
               
