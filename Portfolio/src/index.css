@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-dark text-gray-200 antialiased font-sans;
+    @apply bg-gray-50 dark:bg-dark text-gray-900 dark:text-gray-200 antialiased font-sans transition-colors duration-300;
   }
 }
 
@@ -13,7 +13,7 @@ html {
 }
 
 .glass-panel {
-  @apply bg-card/60 backdrop-blur-md border border-gray-800 rounded-2xl;
+  @apply bg-white/60 dark:bg-card/60 backdrop-blur-md border border-gray-200 dark:border-gray-800 rounded-2xl;
 }
 
 .text-gradient {

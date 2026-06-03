@@ -76,8 +76,8 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-16"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">My Projects</h1>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">My Projects</h1>
+        <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
           A collection of projects that showcase my skills and passion for coding
         </p>
       </motion.div>
@@ -91,14 +91,14 @@ const Projects = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="glass-panel p-6 flex flex-col h-full hover:border-blue-500/30 transition-all group hover:-translate-y-1"
           >
-            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-            <p className="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{project.title}</h3>
+            <p className="text-gray-700 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed">
               {project.description}
             </p>
             
             <div className="flex flex-wrap gap-2 mb-8">
               {project.tech.map((tech) => (
-                <span key={tech} className="px-3 py-1 bg-blue-900/30 text-blue-300 text-xs font-medium rounded-full border border-blue-800/50">
+                <span key={tech} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full border border-blue-200 dark:border-blue-800/50">
                   {tech}
                 </span>
               ))}
@@ -110,12 +110,12 @@ const Projects = () => {
                   href={project.live} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg text-sm font-medium transition-colors shadow-sm"
                 >
                   Live Demo
                 </a>
               ) : (
-                <div className="bg-gray-800/50 text-gray-500 text-center py-2 rounded-lg text-sm font-medium cursor-not-allowed">
+                <div className="bg-gray-100 dark:bg-gray-800/50 text-gray-400 dark:text-gray-500 text-center py-2 rounded-lg text-sm font-medium cursor-not-allowed">
                   No Live Demo
                 </div>
               )}
@@ -124,7 +124,7 @@ const Projects = () => {
                 href={project.github} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-gray-800 hover:bg-gray-700 text-white text-center py-2 rounded-lg text-sm font-medium transition-colors border border-gray-700"
+                className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white text-center py-2 rounded-lg text-sm font-medium transition-colors border border-gray-200 dark:border-gray-700 shadow-sm"
               >
                 GitHub
               </a>
