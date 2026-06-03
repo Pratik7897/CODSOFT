@@ -84,11 +84,13 @@ const Home = () => {
           >
             <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 opacity-20 blur-2xl animate-pulse"></div>
-              <img 
-                src={profileImg} 
-                alt="Pratik Shinde" 
-                className="relative w-full h-full object-cover rounded-full border-4 border-gray-800/50 shadow-2xl z-10"
-              />
+              <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-gray-800/50 shadow-2xl z-10 flex items-center justify-center bg-gray-900">
+                <img 
+                  src={profileImg} 
+                  alt="Pratik Shinde" 
+                  className="w-full h-full object-cover scale-[1.7]"
+                />
+              </div>
               
               {/* Floating elements */}
               <motion.div 
