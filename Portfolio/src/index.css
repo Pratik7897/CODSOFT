@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-gray-200 antialiased font-sans;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glass-panel {
+  @apply bg-card/60 backdrop-blur-md border border-gray-800 rounded-2xl;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500;
+}
