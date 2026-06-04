@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CTA.module.css';
 
-const CTA = () => {
+const CTA = ({ onOpenAuth }) => {
   return (
     <section className={`section ${styles.ctaSection}`}>
       <div className={`container ${styles.container}`}>
@@ -11,7 +11,7 @@ const CTA = () => {
             Join thousands of students who are already using StudySync to stay organized and ace their exams.
           </p>
           <div className={styles.actions}>
-            <button className="btn btn-primary">Create Free Account</button>
+            <button className="btn btn-primary" onClick={onOpenAuth}>Create Free Account</button>
             <p className={styles.disclaimer}>Takes less than 30 seconds.</p>
           </div>
         </div>

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './ProductPreview.module.css';
 
 const ProductPreview = () => {
+  const [activeTab, setActiveTab] = useState('board');
+
   return (
     <section className={`section ${styles.previewSection}`}>
       <div className="container">
@@ -18,12 +20,23 @@ const ProductPreview = () => {
             <div className={styles.urlBar}>app.studysync.com/dashboard</div>
           </div>
           <div className={styles.windowBody}>
-            {/* Abstract UI representation for the preview */}
             <div className={styles.uiNav}>
               <div className={styles.navLogo}></div>
-              <div className={styles.navItemActive}></div>
-              <div className={styles.navItem}></div>
-              <div className={styles.navItem}></div>
+              <div 
+                className={activeTab === 'board' ? styles.navItemActive : styles.navItem}
+                onClick={() => setActiveTab('board')}
+                style={{ cursor: 'pointer', transition: 'all 0.2s' }}
+              ></div>
+              <div 
+                className={activeTab === 'list' ? styles.navItemActive : styles.navItem}
+                onClick={() => setActiveTab('list')}
+                style={{ cursor: 'pointer', transition: 'all 0.2s' }}
+              ></div>
+              <div 
+                className={activeTab === 'calendar' ? styles.navItemActive : styles.navItem}
+                onClick={() => setActiveTab('calendar')}
+                style={{ cursor: 'pointer', transition: 'all 0.2s' }}
+              ></div>
             </div>
             <div className={styles.uiMain}>
               <div className={styles.uiHeader}>
@@ -33,23 +46,52 @@ const ProductPreview = () => {
                   <div className={styles.uiFilter}></div>
                 </div>
               </div>
-              <div className={styles.uiBoard}>
-                <div className={styles.uiColumn}>
-                  <div className={styles.uiColHeader}></div>
-                  <div className={styles.uiCard}></div>
-                  <div className={styles.uiCard}></div>
+              
+              {activeTab === 'board' && (
+                <div className={styles.uiBoard}>
+                  <div className={styles.uiColumn}>
+                    <div className={styles.uiColHeader}></div>
+                    <div className={styles.uiCard}></div>
+                    <div className={styles.uiCard}></div>
+                  </div>
+                  <div className={styles.uiColumn}>
+                    <div className={styles.uiColHeader}></div>
+                    <div className={styles.uiCard}></div>
+                  </div>
+                  <div className={styles.uiColumn}>
+                    <div className={styles.uiColHeader}></div>
+                    <div className={styles.uiCard}></div>
+                    <div className={styles.uiCard}></div>
+                    <div className={styles.uiCard}></div>
+                  </div>
                 </div>
-                <div className={styles.uiColumn}>
-                  <div className={styles.uiColHeader}></div>
-                  <div className={styles.uiCard}></div>
+              )}
+
+              {activeTab === 'list' && (
+                <div className={styles.uiList}>
+                  {[1, 2, 3, 4, 5].map(i => (
+                    <div key={i} className={styles.uiListItem}>
+                      <div className={styles.uiListCheck}></div>
+                      <div className={styles.uiListText}></div>
+                      <div className={styles.uiListTag}></div>
+                    </div>
+                  ))}
                 </div>
-                <div className={styles.uiColumn}>
-                  <div className={styles.uiColHeader}></div>
-                  <div className={styles.uiCard}></div>
-                  <div className={styles.uiCard}></div>
-                  <div className={styles.uiCard}></div>
+              )}
+
+              {activeTab === 'calendar' && (
+                <div className={styles.uiCalendar}>
+                  <div className={styles.uiCalGrid}>
+                    {[...Array(35)].map((_, i) => (
+                      <div key={i} className={styles.uiCalDay}>
+                        {i === 12 && <div className={styles.uiCalEvent}></div>}
+                        {i === 15 && <div className={styles.uiCalEvent}></div>}
+                        {i === 24 && <div className={styles.uiCalEvent}></div>}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

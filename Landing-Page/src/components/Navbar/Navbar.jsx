@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BookOpen, Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({ onOpenAuth }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -18,10 +18,11 @@ const Navbar = () => {
           <a href="#features" onClick={() => setIsMobileMenuOpen(false)}>Features</a>
           <a href="#benefits" onClick={() => setIsMobileMenuOpen(false)}>Benefits</a>
           <a href="#faq" onClick={() => setIsMobileMenuOpen(false)}>FAQ</a>
+          <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
           
           <div className={styles.navActions}>
-            <button className={`${styles.loginBtn}`}>Log in</button>
-            <button className={`btn btn-primary ${styles.signupBtn}`}>Sign up free</button>
+            <button className={`${styles.loginBtn}`} onClick={onOpenAuth}>Log in</button>
+            <button className={`btn btn-primary ${styles.signupBtn}`} onClick={onOpenAuth}>Sign up free</button>
           </div>
         </nav>
 

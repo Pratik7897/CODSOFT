@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import styles from './Hero.module.css';
 
-const Hero = () => {
+const Hero = ({ onOpenAuth }) => {
   return (
     <section id="home" className={styles.hero}>
       <div className={`container ${styles.container}`}>
@@ -19,7 +19,7 @@ const Hero = () => {
           </p>
           
           <div className={styles.actions}>
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={onOpenAuth}>
               Start for free
               <ArrowRight size={18} className={styles.btnIcon} />
             </button>
