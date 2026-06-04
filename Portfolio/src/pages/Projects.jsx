@@ -64,6 +64,14 @@ const projects = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     live: 'https://naruto-animation-five.vercel.app',
     github: 'https://github.com/Pratik7897/Naruto-Animation',
+  },
+  {
+    id: 8,
+    title: 'Nexus Store',
+    description: 'An ultra-minimalist, high-profile e-commerce platform with a dynamic dark/light theme toggle and client-side routing.',
+    tech: ['React', 'Vite', 'React Router', 'CSS3'],
+    live: '',
+    github: 'https://github.com/Pratik7897/T5',
   }
 ];
 
