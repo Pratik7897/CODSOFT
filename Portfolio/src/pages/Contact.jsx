@@ -32,15 +32,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-[#0a0a0a] min-h-screen">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center mb-16"
+        className="mb-16 border-b border-gray-200 dark:border-[#222222] pb-8"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Have a Project in Mind?</h1>
-        <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">Let's Connect</h1>
+        <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
           I'm always excited to work on new projects and collaborate with creative minds. Let's discuss how we can bring your ideas to life.
         </p>
       </motion.div>
@@ -52,24 +52,24 @@ const Contact = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="lg:col-span-1 space-y-6"
         >
-          <div className="glass-panel p-6 flex items-start space-x-4">
-            <div className="bg-blue-100 dark:bg-blue-600/20 p-3 rounded-lg text-blue-600 dark:text-blue-400">
-              <FaEnvelope size={24} />
+          <div className="bg-white dark:bg-[#111111] p-6 border border-gray-200 dark:border-[#222222] flex items-start space-x-4">
+            <div className="text-gray-900 dark:text-white mt-1">
+              <FaEnvelope size={20} />
             </div>
             <div>
-              <h3 className="text-gray-900 dark:text-white font-semibold mb-1">Email</h3>
-              <a href="mailto:shindepraatik@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <h3 className="text-gray-900 dark:text-white font-bold mb-1">Email</h3>
+              <a href="mailto:shindepraatik@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
                 shindepraatik@gmail.com
               </a>
             </div>
           </div>
           
-          <div className="glass-panel p-6 flex items-start space-x-4">
-            <div className="bg-purple-100 dark:bg-purple-600/20 p-3 rounded-lg text-purple-600 dark:text-purple-400">
-              <FaMapMarkerAlt size={24} />
+          <div className="bg-white dark:bg-[#111111] p-6 border border-gray-200 dark:border-[#222222] flex items-start space-x-4">
+            <div className="text-gray-900 dark:text-white mt-1">
+              <FaMapMarkerAlt size={20} />
             </div>
             <div>
-              <h3 className="text-gray-900 dark:text-white font-semibold mb-1">Location</h3>
+              <h3 className="text-gray-900 dark:text-white font-bold mb-1">Location</h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Pune, Maharashtra, India
               </p>
@@ -83,52 +83,52 @@ const Contact = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="lg:col-span-2"
         >
-          <form className="glass-panel p-8" onSubmit={handleSubmit}>
+          <form className="bg-white dark:bg-[#111111] p-8 border border-gray-200 dark:border-[#222222]" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Your Name</label>
+                <label htmlFor="name" className="block text-gray-900 dark:text-gray-200 text-sm font-bold mb-2">Your Name</label>
                 <input 
                   type="text" 
                   id="name" 
                   name="name"
                   required
-                  className="w-full bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                  className="w-full bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#333333] px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-black dark:focus:border-white transition-colors"
                   placeholder="John Doe"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Your Email</label>
+                <label htmlFor="email" className="block text-gray-900 dark:text-gray-200 text-sm font-bold mb-2">Your Email</label>
                 <input 
                   type="email" 
                   id="email" 
                   name="email"
                   required
-                  className="w-full bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                  className="w-full bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#333333] px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-black dark:focus:border-white transition-colors"
                   placeholder="john@example.com"
                 />
               </div>
             </div>
             
             <div className="mb-6">
-              <label htmlFor="subject" className="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Subject</label>
+              <label htmlFor="subject" className="block text-gray-900 dark:text-gray-200 text-sm font-bold mb-2">Subject</label>
               <input 
                 type="text" 
                 id="subject" 
                 name="subject"
                 required
-                className="w-full bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                className="w-full bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#333333] px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-black dark:focus:border-white transition-colors"
                 placeholder="Project Idea"
               />
             </div>
             
             <div className="mb-8">
-              <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">Message</label>
+              <label htmlFor="message" className="block text-gray-900 dark:text-gray-200 text-sm font-bold mb-2">Message</label>
               <textarea 
                 id="message" 
                 name="message"
                 required
                 rows="5" 
-                className="w-full bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors resize-none"
+                className="w-full bg-gray-50 dark:bg-[#1a1a1a] border border-gray-200 dark:border-[#333333] px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-black dark:focus:border-white transition-colors resize-none"
                 placeholder="Tell me about your project..."
               ></textarea>
             </div>
@@ -136,7 +136,7 @@ const Contact = () => {
             <button 
               type="submit"
               disabled={status === 'sending' || status === 'success'}
-              className={`w-full sm:w-auto px-8 py-4 ${status === 'success' ? 'bg-green-600 hover:bg-green-700 shadow-[0_0_20px_rgba(22,163,74,0.3)] hover:shadow-[0_0_25px_rgba(22,163,74,0.5)]' : 'bg-blue-600 hover:bg-blue-700 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)]'} text-white font-medium rounded-xl transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed`}
+              className={`w-full sm:w-auto px-8 py-4 ${status === 'success' ? 'bg-green-600 hover:bg-green-700 text-white' : 'bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 border border-transparent'} font-bold transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed`}
             >
               {status === 'sending' ? (
                 <span>Sending...</span>

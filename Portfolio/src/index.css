@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 dark:bg-dark text-gray-900 dark:text-gray-200 antialiased font-sans transition-colors duration-300;
+    @apply bg-white dark:bg-[#0a0a0a] text-[#171717] dark:text-[#ededed] antialiased font-sans transition-colors duration-300;
   }
 }
 
@@ -13,9 +13,9 @@ html {
 }
 
 .glass-panel {
-  @apply bg-white/60 dark:bg-card/60 backdrop-blur-md border border-gray-200 dark:border-gray-800 rounded-2xl;
+  @apply bg-white dark:bg-[#111111] border border-gray-200 dark:border-[#222222] shadow-sm;
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-500;
+  @apply text-gray-900 dark:text-white font-bold;
 }
