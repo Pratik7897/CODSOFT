@@ -1,0 +1,170 @@
+.previewSection {
+  background-color: var(--text-main);
+  color: white;
+  padding: 6rem 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  color: var(--text-light);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.browserWindow {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.windowHeader {
+  background-color: #f1f5f9;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+}
+
+.urlBar {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.windowBody {
+  display: flex;
+  height: 600px;
+  background-color: white;
+}
+
+/* Abstract UI elements */
+.uiNav {
+  width: 200px;
+  background-color: #f8fafc;
+  border-right: 1px solid var(--border-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navLogo {
+  height: 24px;
+  width: 100px;
+  background-color: #cbd5e1;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.navItemActive {
+  height: 32px;
+  background-color: #e0e7ff;
+  border-radius: 6px;
+}
+
+.navItem {
+  height: 32px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px dashed #cbd5e1;
+}
+
+.uiMain {
+  flex: 1;
+  padding: 2rem;
+  background-color: white;
+}
+
+.uiHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.uiTitle {
+  width: 150px;
+  height: 28px;
+  background-color: var(--text-main);
+  border-radius: 6px;
+}
+
+.uiFilters {
+  display: flex;
+  gap: 1rem;
+}
+
+.uiFilter {
+  width: 80px;
+  height: 28px;
+  background-color: #f1f5f9;
+  border-radius: 6px;
+}
+
+.uiBoard {
+  display: flex;
+  gap: 1.5rem;
+  height: calc(100% - 60px);
+}
+
+.uiColumn {
+  flex: 1;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.uiColHeader {
+  width: 80px;
+  height: 16px;
+  background-color: #94a3b8;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.uiCard {
+  background-color: white;
+  height: 80px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .windowBody { height: 400px; }
+  .uiNav { display: none; }
+  .uiBoard { flex-direction: column; overflow: hidden; }
+}
