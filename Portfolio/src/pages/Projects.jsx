@@ -70,7 +70,7 @@ const projects = [
     title: 'Nexus Store',
     description: 'An ultra-minimalist, high-profile e-commerce platform with a dynamic dark/light theme toggle and client-side routing.',
     tech: ['React', 'Vite', 'React Router', 'CSS3'],
-    live: '',
+    live: 'https://t5-flame.vercel.app/',
     github: 'https://github.com/Pratik7897/T5',
   }
 ];
